@@ -1,5 +1,7 @@
 # Co Sublevel
 
+[![Build Status](https://travis-ci.org/aliem/co-sublevel.png?branch=master)](https://travis-ci.org/aliem/co-sublevel)
+
 *level-sublevel* for *co*
 
 Wraps a sublevel-wrapped levelup with [co-level](https://github.com/juliangruber/co-level) 
