@@ -1,0 +1,37 @@
+{
+  "name": "co-sublevel",
+  "version": "0.0.1",
+  "description": "sublevel for co",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliem/co-sublevel.git"
+  },
+  "scripts": {
+    "test": "make"
+  },
+  "keywords": [
+    "sublevel",
+    "levelup",
+    "co",
+    "generators"
+  ],
+  "author": "Lorenzo Giuliani",
+  "license": "MIT",
+  "dependencies": {
+    "thunkify": "~0.0.1",
+    "co-level": "~1.0.1",
+    "sublevel": "~2.4.0",
+    "levelup": "~0.18.2",
+    "level-sublevel": "^5.2.0"
+  },
+  "devDependencies": {
+    "memdown": "~0.7.0",
+    "mocha": "~1.18.2",
+    "should": "^3.2.0-beta1",
+    "co": "^3.0.5"
+  },
+  "engines": {
+    "node": ">=0.11.12"
+  }
+}
