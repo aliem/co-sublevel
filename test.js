@@ -1,6 +1,7 @@
 var level = require('./index')
   , memdown = function (l) { return new (require('memdown'))(l) }
   , co = require('co')
+  , wrapStream = require('co-from-stream')
 
 var db = level('db', { db: memdown, type: 'json' })
 
@@ -69,16 +70,16 @@ describe('sublevel-co', function () {
     })
   })
 
-  describe('#read', function () {
+  describe('#readStream', function () {
     it('should yield values from a stream', function (done) {
       co(function *() {
         yield db.put('a', 'b');
         yield db.put('c', 'd');
 
-        var stream = db.readStream();
+        var read = wrapStream(db.readStream());
 
         var data = [], buf;
-        while (buf = yield level.read(stream)) {
+        while (buf = yield read()) {
           data.push({}[buf.key] = buf.value);
         }
 

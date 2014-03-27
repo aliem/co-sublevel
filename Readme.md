@@ -31,17 +31,19 @@ co(function *() {
 
 ### streams
 
-the streams are using the co's [read() function](https://github.com/visionmedia/co/blob/master/examples/streams.js).
+You can yield a stream coming from levelup database using [co-from-stream](https://github.com/juliangruber/co-from-stream)
 
 ```
+var wrapStream = require('co-from-stream')
+
 co(function *() {
   yield db.put('a', 'b');
   yield db.put('c', 'd');
 
-  var stream = db.readStream();
+  var read = wrapStream(db.readStream());
 
   var data = [], buf;
-  while (buf = yield level.read(stream)) {
+  while (buf = yield read()) {
     data.push({}[buf.key] = buf.value);
   }
 

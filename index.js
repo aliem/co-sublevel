@@ -26,8 +26,3 @@ module.exports = function () {
   return wrapped;
 }
 
-/**
- * readableStream for co
- */
-module.exports.read = require('./lib/read');
-
