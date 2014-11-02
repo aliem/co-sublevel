@@ -16,13 +16,16 @@
     "co",
     "generators"
   ],
-  "author": "Lorenzo Giuliani",
+  "author": "Lorenzo Giuliani <lorenzo@frenzart.com>",
+  "contributors": [
+    "Robin Qu <robinqu@gmail.com>"
+  ],
   "license": "MIT",
   "dependencies": {
-    "co-level": "~1.0.1",
+    "co-level": "^1.0.1",
     "level-sublevel": "^6.3.15",
-    "levelup": "~0.18.2",
-    "thunkify": "~0.0.1"
+    "levelup": "^0.19.0",
+    "thunkify": "^2.1.2"
   },
   "devDependencies": {
     "memdown": "~0.7.0",
