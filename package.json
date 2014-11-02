@@ -1,6 +1,6 @@
 {
   "name": "co-sublevel",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "sublevel for co",
   "main": "index.js",
   "repository": {
