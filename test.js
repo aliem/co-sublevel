@@ -76,7 +76,7 @@ describe('sublevel-co', function () {
         yield db.put('a', 'b');
         yield db.put('c', 'd');
 
-        var read = wrapStream(db.readStream());
+        var read = wrapStream(db.createReadStream());
 
         var data = [], buf;
         while (buf = yield read()) {
